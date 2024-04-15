@@ -25,13 +25,7 @@ def run():
         page_icon="👋",
     )
 
-    st.write("# Welcome to Streamlit! 👋")
-=======
-        page_icon="👋👋👋👋👋👋👋👋",
-    )
-
-    st.write("# Canalhas! 👋👋👋👋")
->>>>>>> 3353870 (Initial commit)
+    st.write("# Canalhas! 👋")
 
     st.sidebar.success("Select a demo above.")
 
