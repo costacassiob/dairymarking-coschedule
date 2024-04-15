@@ -70,7 +70,7 @@ st.write("Welcome to CoSchedule, the data tagging system | Bem-vindo ao CoSchedu
 
 
 
-st.write('<html lang="pt-br"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"></head><body><h1>Uso do CoSchedule:</h1><h2>Para Criar uma Seção:</h2><p>Para criar uma nova seção, vá em "Criar uma seção nova". Insira seu e-mail na opção "Enter your email:" e clique em confirmar para receber o código da seção e a senha.</p><p>Compartilhe o código da seção com as pessoas que deseja para que elas possam escolher as datas disponíveis.</p></body></html>', unsafe_allow_html=True)
+st.write('<html lang="pt-br"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"></head><body><h2>Criar uma Seção:</h2><small><p>Para criar uma nova seção, vá em "Criar uma seção nova". Insira seu e-mail na opção "Enter your email:" e clique em confirmar para receber o código da seção e a senha.</p><p>Compartilhe o código da seção com as pessoas que deseja para que elas possam escolher as datas disponíveis.</small></p></body></html>', unsafe_allow_html=True)
 
 
 # Se a opção selecionada for "Criar uma sessão nova", chama a função criar_secao
