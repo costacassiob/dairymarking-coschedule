@@ -62,13 +62,15 @@ df = gsheet_conn.read(spreadsheet=config["spreadsheet"], ttl=5)
 
 st.write('<span style="color:red">OPEN ON COMPUTER   |   ABRA PELO COMPUTADOR</span>'
          , unsafe_allow_html=True)
+st.write('<span style="color:red">OPEN ON COMPUTER   |   ABRA PELO COMPUTADOR</span>'
+         , unsafe_allow_html=True)
 
 # Exibindo conteúdo na parte principal da tela
 st.write("Welcome to CoSchedule, the data tagging system | Bem-vindo ao CoSchedule, sistema de marcação de datas.")
 
 
 
-st.write('<html lang="pt-br"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"></head><body><h1>Uso do CoSchedule:</h1><h2>Para Criar uma Seção:</h2><p>Para criar uma nova seção, vá em "Criar uma seção nova". Insira seu e-mail na opção "Enter your email:" e clique em confirmar para receber o código da seção e a senha.</p><p>Compartilhe o código da seção com as pessoas que deseja para que elas possam escolher as datas disponíveis.</p></body></html>')
+st.write('<html lang="pt-br"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"></head><body><h1>Uso do CoSchedule:</h1><h2>Para Criar uma Seção:</h2><p>Para criar uma nova seção, vá em "Criar uma seção nova". Insira seu e-mail na opção "Enter your email:" e clique em confirmar para receber o código da seção e a senha.</p><p>Compartilhe o código da seção com as pessoas que deseja para que elas possam escolher as datas disponíveis.</p></body></html>', unsafe_allow_html=True)
 
 
 # Se a opção selecionada for "Criar uma sessão nova", chama a função criar_secao
