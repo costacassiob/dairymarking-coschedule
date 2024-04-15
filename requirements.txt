@@ -6,4 +6,3 @@ streamlit
 gspread
 oauth2client
 st-gsheets-connection
-re
