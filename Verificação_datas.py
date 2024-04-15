@@ -6,6 +6,7 @@ import gspread
 from oauth2client.service_account import ServiceAccountCredentials
 import toml
 import pandas as pd
+import re
 
 def ler_datas_google_sheets(config,login_u):
     
@@ -13,9 +14,18 @@ def ler_datas_google_sheets(config,login_u):
     scope = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/drive"]
     credentials = ServiceAccountCredentials.from_json_keyfile_dict(config, scope)
     client = gspread.authorize(credentials)
+    
+    config2 = st.secrets["connections"]["web"]
+
+    # Definir a expressão regular para extrair o ID da planilha
+    pattern = r"/d/([a-zA-Z0-9-_]+)"
+
+    # Aplicar a expressão regular na URL da planilha
+    match = re.search(pattern, config2)
+    spreadsheet_id = match.group(1)
 
     # Abrir a planilha
-    spreadsheet_key = "18TBuWJj7sbR1Ndbp97HXZiIHvSbEsAVKRAlp6gqytxo"
+    spreadsheet_key = spreadsheet_id
     worksheet_name = "DATAS"  # Substitua pelo nome da sua planilha
     worksheet = client.open_by_key(spreadsheet_key).worksheet(worksheet_name)
 

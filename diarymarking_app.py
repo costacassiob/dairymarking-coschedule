@@ -5,10 +5,10 @@ from criar_seçao import criar_secao  # Importa a função criar_secao do arquiv
 from entrar_seçao import entrar_secao  # Importa a função entrar_secao do arquivo entrar_sessao.py
 
 # Carregar configurações do arquivo secrets.toml
-with open("secrets.toml", "r") as f:
-    toml_arq = toml.load(f)
+#with open("secrets.toml", "r") as f:
+#    toml_arq = toml.load(f)
 
-config = toml_arq["connections"]["gsheets"]
+config = st.secrets["connections"]["gsheets"]
 
 # Painel lateral esquerdo
 st.sidebar.header("Options")
