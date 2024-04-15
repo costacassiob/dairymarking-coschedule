@@ -86,7 +86,6 @@ def gerar_login(df,destinatario,config):
 
         # Abrir a planilha
         spreadsheet_key = "18TBuWJj7sbR1Ndbp97HXZiIHvSbEsAVKRAlp6gqytxo"
-        print(spreadsheet_key)
         worksheet_name = "SECAO"  # Substitua pelo nome da sua planilha
         worksheet = client.open_by_key(spreadsheet_key).worksheet(worksheet_name)
 

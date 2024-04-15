@@ -29,7 +29,7 @@ def entrar_secao(df,config):
 
     # Componentes de entrada com valores padrão
     ano = st.number_input("Year:", min_value=1900, max_value=2100, value=ano_padrao, key="ano_input")
-    mes = st.selectbox("Month:", options=range(1, 13), format_func=lambda x: calendar.month_name[x-1], index=mes_padrao-1, key="mes_input")
+    mes = st.selectbox("Month:", options=range(1, 13), format_func=lambda x: calendar.month_name[x], index=mes_padrao-1, key="mes_input")
 
     dias_do_mes = calendar.monthcalendar(ano, mes)
 
