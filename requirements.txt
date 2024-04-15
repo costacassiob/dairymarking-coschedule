@@ -6,6 +6,5 @@ streamlit
 gspread
 oauth2client
 st-gsheets-connection
-regex
-AST
+emailmessage
 
