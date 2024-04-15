@@ -3,6 +3,7 @@ from streamlit_gsheets import GSheetsConnection
 import toml
 from criar_seçao import criar_secao  # Importa a função criar_secao do arquivo criar_sessao.py
 from entrar_seçao import entrar_secao  # Importa a função entrar_secao do arquivo entrar_sessao.py
+from manual_seçao import manual_secao
 
 # Carregar configurações do arquivo secrets.toml
 #with open("secrets.toml", "r") as f:
@@ -62,19 +63,16 @@ df = gsheet_conn.read(spreadsheet=config["spreadsheet"], ttl=5)
 
 st.write('<span style="color:red">OPEN ON COMPUTER   |   ABRA PELO COMPUTADOR</span>'
          , unsafe_allow_html=True)
-st.write('<span style="color:red">OPEN ON COMPUTER   |   ABRA PELO COMPUTADOR</span>'
-         , unsafe_allow_html=True)
 
 # Exibindo conteúdo na parte principal da tela
 st.write("Welcome to CoSchedule, the data tagging system | Bem-vindo ao CoSchedule, sistema de marcação de datas.")
 
 
-
-st.write('<html lang="pt-br"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"></head><body><h2>Criar uma Seção:</h2><small><p>Para criar uma nova seção, vá em "Criar uma seção nova". Insira seu e-mail na opção "Enter your email:" e clique em confirmar para receber o código da seção e a senha.</p><p>Compartilhe o código da seção com as pessoas que deseja para que elas possam escolher as datas disponíveis.</small></p></body></html>', unsafe_allow_html=True)
-
-
-# Se a opção selecionada for "Criar uma sessão nova", chama a função criar_secao
-if opcao == "Create a new session - Criar uma seção nova":
+# Se a opção selecionada for "Manual", chama a função criar_secao
+if opcao == "Manual":
+    manual_secao(df,config)
+# Se a opção selecionada for "Entrar em uma sessão existente", chama a função entrar_secao
+elif opcao == "Create a new session - Criar uma seção nova":
     criar_secao(df,config)
 # Se a opção selecionada for "Entrar em uma sessão existente", chama a função entrar_secao
 elif opcao == "Enter a section - Entrar em uma seção existente":

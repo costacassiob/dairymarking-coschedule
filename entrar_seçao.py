@@ -17,7 +17,6 @@ def toggle_button_state(button_key, datas_selecionadas):
 
 def entrar_secao(df,config):
     st.title("Select Dates")
-    st.write('<html lang="pt-br"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><h2>Já Possui uma Seção?</h2><p>Se você já possui o código de uma seção, vá em "Entrar em uma seção existente" para escolher as datas em que está disponível.</p><p>Preencha o campo "Please inform the Section:" com o código da seção que você possui. Informe seu e-mail no campo "Please inform your email:", selecione o ano em "Year:" e o mês em "Month:".</p><p>Clique nas datas desejadas. Após selecionadas, clique em "Confirm". Pronto! Sua parte está feita. Agora é só aguardar o dono da seção gerar o relatório após todos escolherem as datas.</p></body></html>', unsafe_allow_html=True)
 
     Section = st.text_input("Please inform the Section:", key="section_input")
     Section_email = st.text_input("Please inform your email:", key="email_input")

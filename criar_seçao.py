@@ -9,12 +9,9 @@ import toml
 
 def criar_secao(df,config):
     
-    
-    
     # Adicione aqui a lógica para criar uma nova sessão
     destinatario = st.text_input("Enter your email:")
     if st.button("Confirm"):
-        st.write('<html lang="pt-br"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><h2>Gerar Relatório:</h2><small><p>Se você é o dono da seção e todos já escolheram as datas, vá em "Criar uma seção nova".</p><p>Preencha os campos "Enter your Section:" e "Enter your Password:" com sua seção e senha e clique em "Gerar relatório" para gerar o relatório das datas disponíveis.</p><p>Com o CoSchedule, organizar eventos e coordenar agendas é muito fácil. Experimente e simplifique seu planejamento!</small></p></body></html>', unsafe_allow_html=True)
 
         # Função para validar o formato do email
         def validar_email(email):
@@ -32,8 +29,7 @@ def criar_secao(df,config):
 
 
     st.write("Enter your section and password to view a report of available dates for your group.| Informe sua seção e senha para gerar relatório de datas disponíveis do seu grupo.")
-    st.write("Enter your section and password to view a report of available dates for your group.| Informe sua seção e senha para gerar relatório de datas disponíveis do seu grupo.")
-    st.write("Enter your section and password to view a report of available dates for your group.| Informe sua seção e senha para gerar relatório de datas disponíveis do seu grupo.")
+
     login_u = st.text_input("Enter your Section:")
     senha_u = st.text_input("Enter your Password:")
     if st.button("View report - Gerar relatório"):
@@ -48,8 +44,6 @@ def criar_secao(df,config):
         else:
             st.error("Incorrect Section or Password")
 
-    
-    st.write()
 
 def gerar_login(df,destinatario,config):
 
