@@ -8,10 +8,12 @@ from Verificação_datas import ler_datas_google_sheets
 import toml
 
 def criar_secao(df,config):
-    st.write("You have chosen to create a new section.| Você escolheu criar uma nova seção.")
+    
     # Adicione aqui a lógica para criar uma nova sessão
     destinatario = st.text_input("Enter your email:")
     if st.button("Confirm"):
+        st.write('<html lang="pt-br"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><h2>Gerar Relatório:</h2><p>Se você é o dono da seção e todos já escolheram as datas, vá em "Criar uma seção nova".</p><p>Preencha os campos "Enter your Section:" e "Enter your Password:" com sua seção e senha e clique em "Gerar relatório" para gerar o relatório das datas disponíveis.</p><p>Com o CoSchedule, organizar eventos e coordenar agendas é muito fácil. Experimente e simplifique seu planejamento!</p></body></html>')
+
         # Função para validar o formato do email
         def validar_email(email):
             # Verifica se o email tem um @ e pelo menos um ponto depois do @
@@ -27,7 +29,7 @@ def criar_secao(df,config):
             st.success("An email with Section and Password has been successfully sent to {}. | A Seção e a senha foram enviados com sucesso para o email {}".format(destinatario, destinatario))
 
 
-
+    st.write("Enter your section and password to view a report of available dates for your group.| Informe sua seção e senha para gerar relatório de datas disponíveis do seu grupo.")
     login_u = st.text_input("Enter your Section:")
     senha_u = st.text_input("Enter your Password:")
     if st.button("View report - Gerar relatório"):
