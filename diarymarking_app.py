@@ -10,8 +10,25 @@ from entrar_seçao import entrar_secao  # Importa a função entrar_secao do arq
 
 config = st.secrets["connections"]["gsheets"]
 
-# Inserir a imagem
-st.image("Designer.jpeg", use_column_width=True)
+# Centralizar texto com borda no painel lateral
+st.sidebar.markdown("""
+    <style>
+    .text-container {
+        display: flex;
+        justify-content: center;
+    }
+    .bordered-text {
+        border: 2px solid #000080; /* Cor da borda (azul marinho) */
+        padding: 10px; /* Espaçamento interno da borda */
+        color: #000080; /* Cor do texto (azul marinho) */
+        font-weight: bold; /* Negrito */
+        font-size: x-large; /* Tamanho da fonte maior */
+    }
+    </style>
+""", unsafe_allow_html=True)
+
+# Incluir texto com borda no painel lateral
+st.sidebar.markdown('<div class="text-container"><div class="bordered-text">CoSchedule</div></div>', unsafe_allow_html=True)
 
 # Painel lateral esquerdo
 st.sidebar.header("Options")
