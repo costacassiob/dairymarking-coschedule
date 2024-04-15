@@ -27,8 +27,7 @@ def criar_secao(df,config):
             st.success("An email with Section and Password has been successfully sent to {}. | A Seção e a senha foram enviados com sucesso para o email {}".format(destinatario, destinatario))
 
 
-    login_u = st.text_input("Enter your Section:")
-    login_u = st.text_input("Enter your Section:")
+
     login_u = st.text_input("Enter your Section:")
     senha_u = st.text_input("Enter your Password:")
     if st.button("View report - Gerar relatório"):
