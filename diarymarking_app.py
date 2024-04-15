@@ -33,7 +33,7 @@ st.sidebar.markdown('<div class="text-container"><div class="bordered-text">CoSc
 
 # Painel lateral esquerdo
 st.sidebar.header("Options")
-opcao = st.sidebar.radio("Choose an option:", ("Create a new session - Criar uma seção nova", "Enter a section - Entrar em uma seção existente"))
+opcao = st.sidebar.radio("Choose an option:", ("Manual","Create a new session - Criar uma seção nova", "Enter a section - Entrar em uma seção existente"))
 
 st.sidebar.write('<span style="color:green">Did you like my work? How about making a donation!?   |   Gostou do meu trabalho? Que tal fazer uma doação!?</span>', unsafe_allow_html=True)
 st.sidebar.write('PIX: costa.bcassio@gmail.com', unsafe_allow_html=True)
