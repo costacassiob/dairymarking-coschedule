@@ -8,7 +8,7 @@ def enviar_email(destinatario, login_usu, senha_usu):  # Alterando o nome do par
     <p>&nbsp;</p>
     <p>Segue sua se&ccedil;&atilde;o e senha para acesso e recupera&ccedil;&atilde;o do relat&oacute;rio de datas dispon&iacute;veis. Compartilhe a sua se&ccedil;&atilde;o com as pessoas que voc&ecirc; deseja que participem da escolha das datas.</p>
     <p>Here is your section and password for accessing and recovering the available dates report. Share your section with the people you want to participate in choosing the dates.</p>
-    <p><strong>LOGIN: """+ login_usu +"""</strong></p>
+    <p><strong>SEÇÃO: """+ login_usu +"""</strong></p>
     <p><strong>PASSOWORD: """+ senha_usu + """</strong></p>
     <p>&nbsp;</p>
     <address>Abra&ccedil;os fraternos!</address>
