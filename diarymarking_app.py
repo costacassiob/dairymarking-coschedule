@@ -35,13 +35,24 @@ st.sidebar.header("Options")
 opcao = st.sidebar.radio("Choose an option:", ("Create a new session - Criar uma seção nova", "Enter a section - Entrar em uma seção existente"))
 
 st.sidebar.write('<span style="color:green">Did you like my work? How about making a donation!?   |   Gostou do meu trabalho? Que tal fazer uma doação!?</span>', unsafe_allow_html=True)
+st.sidebar.write('PIX: costa.bcassio@gmail.com', unsafe_allow_html=True)
 
-# Adicionando QR Code ao painel lateral e centralizando
-st.sidebar.markdown("""
-    <div style="display: flex; justify-content: center;">
-        00020126580014BR.GOV.BCB.PIX013640b16c7e-5649-481e-846e-355bd48536ae5204000053039865802BR5921Cassio Bernardo Costa6009SAO PAULO62140510ObdCeGdkCa6304BB77
-    </div>
-""", unsafe_allow_html=True)
+
+# Inserir imagem centralizada no painel lateral
+st.sidebar.image("QR-code.png", use_column_width=True, caption="Legenda da imagem")
+
+# Aplicar estilo CSS para centralizar a imagem
+st.markdown(
+    """
+    <style>
+    .sidebar .stImage > div {
+        display: flex;
+        justify-content: center;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 
 # Conexão com o Google Sheets
 gsheet_conn = GSheetsConnection("gsheets", **config)
