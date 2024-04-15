@@ -7,5 +7,3 @@ gspread
 oauth2client
 st-gsheets-connection
 pandas
-re
-ast
