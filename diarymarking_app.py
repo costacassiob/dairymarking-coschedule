@@ -10,6 +10,9 @@ from entrar_seçao import entrar_secao  # Importa a função entrar_secao do arq
 
 config = st.secrets["connections"]["gsheets"]
 
+# Inserir a imagem
+st.image("Designer.jpeg", use_column_width=True)
+
 # Painel lateral esquerdo
 st.sidebar.header("Options")
 opcao = st.sidebar.radio("Choose an option:", ("Create a new session - Criar uma seção nova", "Enter a section - Entrar em uma seção existente"))
