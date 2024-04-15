@@ -24,17 +24,17 @@ def criar_secao(df,config):
 
     login_u = st.text_input("Enter your Login:")
     senha_u = st.text_input("Enter your Password:")
-    if st.button("Gerar relatório"):
+    if st.button("View report - Gerar relatório"):
   
         if login_u in df["SEÇÃO"].values:
             senha_correspondente = df.loc[df["SEÇÃO"] == login_u, "SENHA"].values[0]
             if senha_u == senha_correspondente:
-                st.error("Senha OK")
+                st.success("Wait for file to be generated - date formatted YYYY/MM/DD")
                 ler_datas_google_sheets(config,login_u)
             else:
-                st.write("Incorrect Section or Password")
+                st.error("Incorrect Section or Password")
         else:
-            st.write("Incorrect Section or Password")
+            st.error("Incorrect Section or Password")
 
     
     st.write()
@@ -86,6 +86,7 @@ def gerar_login(df,destinatario,config):
 
         # Abrir a planilha
         spreadsheet_key = "18TBuWJj7sbR1Ndbp97HXZiIHvSbEsAVKRAlp6gqytxo"
+        print(spreadsheet_key)
         worksheet_name = "SECAO"  # Substitua pelo nome da sua planilha
         worksheet = client.open_by_key(spreadsheet_key).worksheet(worksheet_name)
 
