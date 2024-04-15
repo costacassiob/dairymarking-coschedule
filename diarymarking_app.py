@@ -60,6 +60,8 @@ gsheet_conn = GSheetsConnection("gsheets", **config)
 # Carregar e exibir a planilha
 df = gsheet_conn.read(spreadsheet=config["spreadsheet"], ttl=5)
 
+st.write('<span style="color:red">OPEN ON COMPUTER   |   ABRA PELO COMPUTADOR</span>', unsafe_allow_html=True)
+
 # Exibindo conteúdo na parte principal da tela
 st.write("Welcome to the data tagging system | Bem-vindo ao sistema de marcação de datas.")
 
