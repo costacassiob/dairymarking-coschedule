@@ -12,7 +12,12 @@ def criar_secao(df,config):
     # Adicione aqui a lógica para criar uma nova sessão
     destinatario = st.text_input("Enter your email:")
     if st.button("Confirm"):
-        if not destinatario:
+        # Função para validar o formato do email
+        def validar_email(email):
+            # Verifica se o email tem um @ e pelo menos um ponto depois do @
+            return "@" in email and "." in email[email.index("@"):]
+
+        if not destinatario or not validar_email(destinatario):
             st.error("Please enter a valid email.")
         else:
             # Chama a função enviar_email para enviar o e-mail, passando o email fornecido como argumento.
