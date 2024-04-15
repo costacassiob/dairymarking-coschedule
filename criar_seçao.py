@@ -23,7 +23,8 @@ def criar_secao(df,config):
         else:
             # Chama a função enviar_email para enviar o e-mail, passando o email fornecido como argumento.
             login_usu, senha_usu = gerar_login(df,destinatario,config)
-            enviar_email(destinatario, login_usu, senha_usu)  # Aqui você pode passar os argumentos necessários, se houver
+            password = st.secrets["connections"]["gsheets"]["password"]
+            enviar_email(destinatario, login_usu, senha_usu,password)  # Aqui você pode passar os argumentos necessários, se houver
 
             st.success("An email with Section and Password has been successfully sent to {}. | A Seção e a senha foram enviados com sucesso para o email {}".format(destinatario, destinatario))
 

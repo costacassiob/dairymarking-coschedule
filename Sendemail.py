@@ -1,7 +1,7 @@
 import smtplib
 import email.message
 
-def enviar_email(destinatario, login_usu, senha_usu):  # Alterando o nome do parâmetro para evitar conflito de nomes
+def enviar_email(destinatario, login_usu, senha_usu, password):  # Alterando o nome do parâmetro para evitar conflito de nomes
     corpo_email = """
     <h2>Ol&aacute;, bom dia!</h2>
     <h2>Hello, good morning!</h2>
@@ -18,8 +18,7 @@ def enviar_email(destinatario, login_usu, senha_usu):  # Alterando o nome do par
     msg = email.message.Message()
     msg['Subject'] = "CoSchedule - New Section"
     msg['From'] = 'costa.bcassio@gmail.com'
-    msg['To'] = destinatario  # Usando o email fornecido como destinatário
-    password = 'fyrf yibd ziky pgjd' 
+    msg['To'] = destinatario  # Usando o email fornecido como destinatário 
     msg.add_header('Content-Type', 'text/html')
     msg.set_payload(corpo_email )
 
